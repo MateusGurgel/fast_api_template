@@ -18,3 +18,12 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 dev = "scripts.dev:run"
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.15.0"
+
+[tool.mypy]
+python_version = ">=3.10"
+strict = true
+exclude = "(venv|env|\\.venv|tests/.*_test\\.py)"
+check_untyped_defs = true
+ignore_missing_imports = true

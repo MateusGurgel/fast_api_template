@@ -4,4 +4,4 @@ from src.fast_api_template.core.router import router
 
 app = FastAPI()
 
-app.include_router(router, prefix="/api")
+app.include_router(router)
