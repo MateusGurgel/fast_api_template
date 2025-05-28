@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: add mypy">
-      <change afterPath="$PROJECT_DIR$/.pre-commit-config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: add mypy and pre-commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/adrs/project_structure.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/adrs/project_structure.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/dev.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/core/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/core/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/core/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/core/router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/health_check/infra/health_check_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/health_check/infra/health_check_router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/health_check/use_cases/health_check/health_check_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/health_check/use_cases/health_check/health_check_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/health_check/use_cases/health_check/health_check_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/health_check/use_cases/health_check/health_check_dto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/v1/infra/v1_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/v1/infra/v1_router.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +87,7 @@
       <updated>1748210190024</updated>
       <workItem from="1748210193996" duration="632000" />
       <workItem from="1748210938424" duration="981000" />
-      <workItem from="1748212262534" duration="12000000" />
+      <workItem from="1748212262534" duration="13951000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -120,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748223929529</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add mypy and pre-commit">
+      <option name="closed" value="true" />
+      <created>1748226276441</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1748226276441</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +122,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="feat: add mypy" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add mypy" />
+    <MESSAGE value="feat: add mypy and pre-commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add mypy and pre-commit" />
   </component>
 </project>
