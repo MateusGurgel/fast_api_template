@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: add mypy and pre-commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,6 +63,7 @@
       <recent name="$PROJECT_DIR$/src/fast_api_template" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/fast_api_template/v1/shared/middlewares" />
       <recent name="$PROJECT_DIR$/src/fast_api_template/modules/health_check/use_cases/health_check" />
       <recent name="$PROJECT_DIR$/src/fast_api_template" />
       <recent name="$PROJECT_DIR$/src/fast_api_template/v1" />
@@ -88,6 +87,7 @@
       <workItem from="1748210193996" duration="632000" />
       <workItem from="1748210938424" duration="981000" />
       <workItem from="1748212262534" duration="13951000" />
+      <workItem from="1748397046598" duration="4686000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -113,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748226276441</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="FEAT: Add middleware support and clean up dependencies&#10;&#10;Introduced middleware for CORS, GZip compression, and process time tracking in the FastAPI application. Updated `poetry.lock` to remove unused `dev` groups and made minor adjustments to improve project configuration consistency.">
+      <option name="closed" value="true" />
+      <created>1748445682299</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748445682299</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +131,8 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="feat: add mypy" />
     <MESSAGE value="feat: add mypy and pre-commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add mypy and pre-commit" />
+    <MESSAGE value="feat: add process_time and gzip middlewares." />
+    <MESSAGE value="FEAT: Add middleware support and clean up dependencies&#10;&#10;Introduced middleware for CORS, GZip compression, and process time tracking in the FastAPI application. Updated `poetry.lock` to remove unused `dev` groups and made minor adjustments to improve project configuration consistency." />
+    <option name="LAST_COMMIT_MESSAGE" value="FEAT: Add middleware support and clean up dependencies&#10;&#10;Introduced middleware for CORS, GZip compression, and process time tracking in the FastAPI application. Updated `poetry.lock` to remove unused `dev` groups and made minor adjustments to improve project configuration consistency." />
   </component>
 </project>

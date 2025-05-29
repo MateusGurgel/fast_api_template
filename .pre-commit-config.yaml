@@ -10,6 +10,8 @@ repos:
       - id: mypy
         additional_dependencies:
           - pydantic
+          - sqlmodel
+          - pydantic-settings
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
     rev: v0.3.5
