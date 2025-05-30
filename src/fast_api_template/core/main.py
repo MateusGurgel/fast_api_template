@@ -5,7 +5,7 @@ from fastapi import FastAPI
 
 from src.fast_api_template.core.infra.database import create_db_and_tables
 from src.fast_api_template.core.middlewares import add_middlewares
-from src.fast_api_template.core.router import router
+from src.fast_api_template.core.infra.base_router import router
 
 
 @asynccontextmanager

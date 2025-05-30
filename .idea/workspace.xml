@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="" />
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="FEAT: Add environment settings handling with Pydantic integration, partial database integration and docker compose creation&#10;&#10;Introduced a new `Settings` class using Pydantic for managing environment variables, with `.env` file support. Additionally, updated dependencies to include `pydantic-settings`, `greenlet`, and `sqlalchemy` for enhanced configuration and database support.">
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/user_router_v1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/core/infra/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/core/infra/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/core/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/core/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/core/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/core/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/core/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/core/infra/base_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/v1/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/infra/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/v1/infra/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/shared/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/v1/infra/v1_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/infra/v1_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/v1/modules/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/shared/middlewares/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/v1/modules/user/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/v1/modules/user/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/v1/shared/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/v1/shared/middlewares/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/contract/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/v1/shared/middlewares/process_time/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/v1/shared/middlewares/process_time_middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/shared/middlewares/process_time_middleware.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,10 +80,11 @@
       <recent name="$PROJECT_DIR$/src/fast_api_template" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/fast_api_template/v1/shared/middlewares" />
-      <recent name="$PROJECT_DIR$/src/fast_api_template/modules/health_check/use_cases/health_check" />
+      <recent name="$PROJECT_DIR$/src/fast_api_template/core/infra" />
+      <recent name="$PROJECT_DIR$/src/fast_api_template/modules" />
       <recent name="$PROJECT_DIR$/src/fast_api_template" />
-      <recent name="$PROJECT_DIR$/src/fast_api_template/v1" />
+      <recent name="$PROJECT_DIR$/src/fast_api_template/core" />
+      <recent name="$PROJECT_DIR$/src/fast_api_template/v1/shared/middlewares" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -88,6 +106,8 @@
       <workItem from="1748210938424" duration="981000" />
       <workItem from="1748212262534" duration="13951000" />
       <workItem from="1748397046598" duration="4686000" />
+      <workItem from="1748475921928" duration="10017000" />
+      <workItem from="1748568523428" duration="4657000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -121,11 +141,30 @@
       <option name="project" value="LOCAL" />
       <updated>1748445682299</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="FEAT: Add environment settings handling with Pydantic integration, partial database integration and docker compose creation&#10;&#10;Introduced a new `Settings` class using Pydantic for managing environment variables, with `.env` file support. Additionally, updated dependencies to include `pydantic-settings`, `greenlet`, and `sqlalchemy` for enhanced configuration and database support.">
+      <option name="closed" value="true" />
+      <created>1748480058306</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1748480058306</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
@@ -133,6 +172,9 @@
     <MESSAGE value="feat: add mypy and pre-commit" />
     <MESSAGE value="feat: add process_time and gzip middlewares." />
     <MESSAGE value="FEAT: Add middleware support and clean up dependencies&#10;&#10;Introduced middleware for CORS, GZip compression, and process time tracking in the FastAPI application. Updated `poetry.lock` to remove unused `dev` groups and made minor adjustments to improve project configuration consistency." />
-    <option name="LAST_COMMIT_MESSAGE" value="FEAT: Add middleware support and clean up dependencies&#10;&#10;Introduced middleware for CORS, GZip compression, and process time tracking in the FastAPI application. Updated `poetry.lock` to remove unused `dev` groups and made minor adjustments to improve project configuration consistency." />
+    <MESSAGE value="feat: " />
+    <MESSAGE value="FEAT: Add environment settings handling with Pydantic integration, partial database integration and docker compose creation&#10;&#10;Introduced a new `Settings` class using Pydantic for managing environment variables, with `.env` file support. Additionally, updated dependencies to include `pydantic-settings`, `greenlet`, and `sqlalchemy` for enhanced configuration and database support." />
+    <MESSAGE value="REFACTOR: " />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTOR: " />
   </component>
 </project>

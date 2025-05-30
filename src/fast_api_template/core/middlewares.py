@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 
-from src.fast_api_template.v1.shared.middlewares.process_time_middleware import (
+from src.fast_api_template.modules.shared.middlewares.process_time_middleware import (
     add_process_time_header,
 )
 

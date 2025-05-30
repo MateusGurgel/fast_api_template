@@ -5,10 +5,8 @@ from pydantic import (
 from pydantic_settings import BaseSettings
 
 
-class Settings(BaseSettings):
+class ENV(BaseSettings):
     POSTGRES_URL: PostgresDsn
 
 
-settings = Settings(_env_file=".env", _env_file_encoding="utf-8")
-
-print(settings.model_dump())
+env = ENV(_env_file=".env", _env_file_encoding="utf-8")
