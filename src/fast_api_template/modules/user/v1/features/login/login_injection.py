@@ -3,15 +3,15 @@ from src.fast_api_template.modules.user.repository.user_repository_injection imp
     GetUserRepository,
 )
 from src.fast_api_template.modules.user.repository.user_repository import UserRepository
-from src.fast_api_template.modules.user.v1.features.create_user.create_user_use_case import (
-    CreateUserUseCase,
+from src.fast_api_template.modules.user.v1.features.login.login_use_case import (
+    LoginUseCase,
 )
 
 
-def get_create_user_use_case(
+def get_login_use_case(
     user_repository: UserRepository = GetUserRepository,
-) -> CreateUserUseCase:
-    return CreateUserUseCase(user_repository)
+) -> LoginUseCase:
+    return LoginUseCase(user_repository)
 
 
-GetCreateUserUseCase = Depends(get_create_user_use_case)
+GetLoginUseCase = Depends(get_login_use_case)

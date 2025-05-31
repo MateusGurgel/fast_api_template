@@ -1,4 +1,6 @@
-from sqlmodel import Session
+from typing import Optional
+
+from sqlmodel import Session, select
 
 from src.fast_api_template.modules.user.repository.schemas.create_user_schema import (
     CreateUserSchema,
@@ -19,3 +21,8 @@ class UserRepository:
         self.db.commit()
         self.db.refresh(user)
         return user
+
+    def get_with_email(self, email: str) -> Optional[User]:
+        statement = select(User).where(User.email == email)
+        result = self.db.exec(statement)
+        return result.first()
