@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from src.fast_api_template.modules.user.v1.use_cases.create_user_use_case.create_user_controller import (
+from src.fast_api_template.modules.user.v1.features.create_user.create_user_controller import (
     create_user,
 )
 

@@ -13,7 +13,7 @@ class UserRepository:
 
     def create(self, create_user_schema: CreateUserSchema) -> User:
         user = User(
-            name=create_user_schema.hashed_password, email=create_user_schema.email
+            password=create_user_schema.hashed_password, email=create_user_schema.email
         )
         self.db.add(user)
         self.db.commit()
