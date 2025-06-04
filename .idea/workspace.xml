@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="FEAT: Add environment settings handling with Pydantic integration, partial database integration and docker compose creation&#10;&#10;Introduced a new `Settings` class using Pydantic for managing environment variables, with `.env` file support. Additionally, updated dependencies to include `pydantic-settings`, `greenlet`, and `sqlalchemy` for enhanced configuration and database support.">
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="FEAT: add &quot;get me&quot; endpoint with JWT-based user retrieval and response DTO">
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/shared/dependency_injections/require_user_injection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/get_me/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/get_me/get_me_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/get_me/get_me_dto.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/shared/utils/crypto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/shared/utils/crypto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/login/login_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/login/login_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/infra/user_router_v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/infra/user_router_v1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +57,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mateus/Projects/fast_api_template/src/fast_api_template/modules/health_check/use_cases/health_check&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mateus/Projects/fast_api_template/src/fast_api_template/modules/user/v1/features/get_me&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -61,6 +68,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/get_me" />
       <recent name="$PROJECT_DIR$/src/fast_api_template/modules/health_check/use_cases/health_check" />
       <recent name="$PROJECT_DIR$/src/fast_api_template" />
     </key>
@@ -75,8 +83,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.122" />
-        <option value="bundled-python-sdk-880ecab49056-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.122" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
+        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
       </set>
     </attachedChunks>
   </component>
@@ -94,6 +102,7 @@
       <workItem from="1748475921928" duration="10017000" />
       <workItem from="1748568523428" duration="4657000" />
       <workItem from="1748699633849" duration="2869000" />
+      <workItem from="1749054981909" duration="9411000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -161,6 +170,7 @@
     <MESSAGE value="feat: " />
     <MESSAGE value="FEAT: Add environment settings handling with Pydantic integration, partial database integration and docker compose creation&#10;&#10;Introduced a new `Settings` class using Pydantic for managing environment variables, with `.env` file support. Additionally, updated dependencies to include `pydantic-settings`, `greenlet`, and `sqlalchemy` for enhanced configuration and database support." />
     <MESSAGE value="REFACTOR: " />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTOR: " />
+    <MESSAGE value="FEAT: add &quot;get me&quot; endpoint with JWT-based user retrieval and response DTO" />
+    <option name="LAST_COMMIT_MESSAGE" value="FEAT: add &quot;get me&quot; endpoint with JWT-based user retrieval and response DTO" />
   </component>
 </project>
