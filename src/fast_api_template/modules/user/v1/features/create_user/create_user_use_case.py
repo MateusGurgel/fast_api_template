@@ -1,3 +1,6 @@
+from fastapi import HTTPException
+from sqlalchemy.exc import IntegrityError
+
 from src.fast_api_template.modules.shared.base_use_case import BaseUseCase
 from src.fast_api_template.modules.shared.utils.crypto import hash_string
 from src.fast_api_template.modules.user.repository.schemas.create_user_schema import (
@@ -21,10 +24,11 @@ class CreateUserUseCase(BaseUseCase[CreateUserDTO, CreateUserResponseDTO]):
 
         hashed_password = hash_string(dto.password)
 
-        print(hashed_password)
-
-        self.user_repository.create(
-            CreateUserSchema(email=dto.email, hashed_password=hashed_password)
-        )
+        try:
+            self.user_repository.create(
+                CreateUserSchema(email=dto.email, hashed_password=hashed_password)
+            )
+        except IntegrityError:
+            raise HTTPException(status_code=400, detail="The email already exists")
 
         return CreateUserResponseDTO(message="Ok")

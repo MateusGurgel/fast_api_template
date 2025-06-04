@@ -13,6 +13,7 @@ repos:
           - sqlmodel
           - pydantic-settings
           - pyjwt
+          - pytest
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
     rev: v0.3.5
