@@ -10,7 +10,7 @@ from src.fast_api_template.core.infra.base_router import router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
-    create_db_and_tables()
+    await create_db_and_tables()
     yield
 
 

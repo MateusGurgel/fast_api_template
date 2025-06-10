@@ -30,7 +30,7 @@ async def get_current_user(
         if now > expires_at:
             raise HTTPException(status_code=401, detail="Expired Token")
 
-        user: Optional[User] = user_repository.get_with_email(payload["email"])
+        user: Optional[User] = await user_repository.get_with_email(payload["email"])
 
         if not user:
             raise HTTPException(status_code=401, detail="Bad Credentials")

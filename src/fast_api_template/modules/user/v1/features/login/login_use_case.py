@@ -28,7 +28,7 @@ class LoginUseCase(BaseUseCase[LoginDTO, LoginResponseDTO]):
 
     async def handle(self, dto: LoginDTO) -> LoginResponseDTO:
 
-        user: Optional[User] = self.user_repository.get_with_email(str(dto.email))
+        user: Optional[User] = await self.user_repository.get_with_email(str(dto.email))
 
         if not user:
             raise HTTPException(status_code=404, detail="Bad Credentials")

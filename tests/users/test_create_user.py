@@ -7,7 +7,7 @@ from src.fast_api_template.core.infra.database import (
 )
 
 
-def test_login(session: Session) -> None:
+async def test_login(session: Session) -> None:
 
     def get_session_override() -> Session:
         return session

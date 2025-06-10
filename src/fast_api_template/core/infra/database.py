@@ -1,18 +1,20 @@
-from typing import Generator
+from typing import AsyncGenerator
 
-from sqlmodel import create_engine, Session
+from sqlalchemy.ext.asyncio import create_async_engine
+from sqlmodel.ext.asyncio.session import AsyncSession
 from sqlmodel import SQLModel
 
 sqlite_file_name = "database.db"
-sqlite_url = f"sqlite:///{sqlite_file_name}"
+sqlite_url = f"sqlite+aiosqlite:///{sqlite_file_name}"
 
-engine = create_engine(sqlite_url, echo=True)
+engine = create_async_engine(sqlite_url, echo=True)
 
 
-def get_session() -> Generator[Session, None, None]:
-    with Session(engine) as session:
+async def get_session() -> AsyncGenerator[AsyncSession, None]:
+    async with AsyncSession(engine) as session:
         yield session
 
 
-def create_db_and_tables() -> None:
-    SQLModel.metadata.create_all(engine)
+async def create_db_and_tables() -> None:
+    async with engine.begin() as conn:
+        await conn.run_sync(SQLModel.metadata.create_all)

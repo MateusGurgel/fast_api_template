@@ -1,16 +1,23 @@
-from typing import Generator
-
 import pytest
-from sqlalchemy import create_engine
-from sqlmodel import SQLModel, Session
-from sqlmodel.pool import StaticPool
+from typing import AsyncGenerator
+from sqlalchemy.ext.asyncio import create_async_engine
+from sqlmodel.ext.asyncio.session import AsyncSession
+from sqlalchemy.pool import StaticPool
+from sqlmodel import SQLModel
 
 
 @pytest.fixture(name="session")
-def session_fixture() -> Generator[Session, None, None]:
-    engine = create_engine(
-        "sqlite://", connect_args={"check_same_thread": False}, poolclass=StaticPool
+async def session_fixture() -> AsyncGenerator[AsyncSession, None]:
+    engine = create_async_engine(
+        "sqlite+aiosqlite:///:memory:",
+        connect_args={"check_same_thread": False},
+        poolclass=StaticPool,
     )
-    SQLModel.metadata.create_all(engine)
-    with Session(engine) as session:
+
+    async with engine.begin() as conn:
+        await conn.run_sync(SQLModel.metadata.create_all)
+
+    async with AsyncSession(engine) as session:
         yield session
+
+    await engine.dispose()

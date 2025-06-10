@@ -25,7 +25,7 @@ class CreateUserUseCase(BaseUseCase[CreateUserDTO, CreateUserResponseDTO]):
         hashed_password = hash_string(dto.password)
 
         try:
-            self.user_repository.create(
+            await self.user_repository.create(
                 CreateUserSchema(email=dto.email, hashed_password=hashed_password)
             )
         except IntegrityError:
