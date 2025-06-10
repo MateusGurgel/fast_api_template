@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="FEAT: add &quot;get me&quot; endpoint with JWT-based user retrieval and response DTO">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/core/infra/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/core/infra/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/core/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/core/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/shared/dependency_injections/require_user_injection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/shared/dependency_injections/require_user_injection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository_contract.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository_contract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository_injection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository_injection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/create_user/create_user_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/create_user/create_user_use_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/login/login_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/login/login_use_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/fixtures/session_fixture.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/fixtures/session_fixture.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/users/test_create_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/users/test_create_user.py" afterDir="false" />
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: converting the whole project to async">
+      <change beforePath="$PROJECT_DIR$/.pre-commit-config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.pre-commit-config.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,11 +66,11 @@
       <recent name="$PROJECT_DIR$/src/fast_api_template" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/src/fast_api_template/core/infra" />
       <recent name="$PROJECT_DIR$/src/fast_api_template/modules" />
       <recent name="$PROJECT_DIR$/src/fast_api_template" />
-      <recent name="$PROJECT_DIR$/src/fast_api_template/core" />
-      <recent name="$PROJECT_DIR$/src/fast_api_template/v1/shared/middlewares" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -109,7 +97,7 @@
       <workItem from="1748699633849" duration="2869000" />
       <workItem from="1749054981909" duration="10282000" />
       <workItem from="1749090472742" duration="73000" />
-      <workItem from="1749516536337" duration="2090000" />
+      <workItem from="1749516536337" duration="2430000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -159,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749069245238</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: converting the whole project to async">
+      <option name="closed" value="true" />
+      <created>1749518876694</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749518876694</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +182,7 @@
     <MESSAGE value="FEAT: Add environment settings handling with Pydantic integration, partial database integration and docker compose creation&#10;&#10;Introduced a new `Settings` class using Pydantic for managing environment variables, with `.env` file support. Additionally, updated dependencies to include `pydantic-settings`, `greenlet`, and `sqlalchemy` for enhanced configuration and database support." />
     <MESSAGE value="REFACTOR: " />
     <MESSAGE value="FEAT: add &quot;get me&quot; endpoint with JWT-based user retrieval and response DTO" />
-    <option name="LAST_COMMIT_MESSAGE" value="FEAT: add &quot;get me&quot; endpoint with JWT-based user retrieval and response DTO" />
+    <MESSAGE value="feat: converting the whole project to async" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: converting the whole project to async" />
   </component>
 </project>
