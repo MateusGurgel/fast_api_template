@@ -55,6 +55,22 @@ test = ["anyio[trio]", "blockbuster (>=1.5.23)", "coverage[toml] (>=7)", "except
 trio = ["trio (>=0.26.1)"]
 
 [[package]]
+name = "blprint"
+version = "0.1.6"
+description = "A simple scaffolding cli"
+optional = false
+python-versions = "<4.0,>=3.10"
+groups = ["main"]
+files = [
+    {file = "blprint-0.1.6-py3-none-any.whl", hash = "sha256:39514ced33d6a931d537b6cbc06931ee54ddc32e8f07af9c2d511de4b029686e"},
+    {file = "blprint-0.1.6.tar.gz", hash = "sha256:26906b11473e5414a29ff3682a16a0c24df22cc621ee166778fe64650bb0a4ea"},
+]
+
+[package.dependencies]
+jinja2 = ">=3.1.5,<4.0.0"
+typer = ">=0.15.1,<0.16.0"
+
+[[package]]
 name = "certifi"
 version = "2025.4.26"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -1649,5 +1665,5 @@ files = [
 
 [metadata]
 lock-version = "2.1"
-python-versions = ">=3.10"
-content-hash = "2eb754cbbc31c7be2df8c22d223ec8c5fc4e1752051346d3ef6126894d835cac"
+python-versions = ">=3.10,<4.0"
+content-hash = "9d9e9fcb8d15d7d6f1b6929612f666d631e4f18788d890582614856183979e5d"

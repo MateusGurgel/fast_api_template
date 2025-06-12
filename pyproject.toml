@@ -6,7 +6,7 @@ authors = [
     {name = "Mateus Gurgel",email = "mateusgurgel15@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10,<4.0"
 dependencies = [
     "fastapi[standard] (>=0.115.12,<0.116.0)",
     "sqlmodel (>=0.0.24,<0.0.25)",
@@ -15,7 +15,8 @@ dependencies = [
     "pyjwt (>=2.10.1,<3.0.0)",
     "pytest (>=8.4.0,<9.0.0)",
     "aiosqlite (>=0.21.0,<0.22.0)",
-    "pytest-asyncio (>=1.0.0,<2.0.0)"
+    "pytest-asyncio (>=1.0.0,<2.0.0)",
+    "blprint (>=0.1.6,<0.2.0)"
 ]
 
 

@@ -1,4 +1,5 @@
 from typing import Optional
+from uuid import UUID
 
 from sqlmodel.ext.asyncio.session import AsyncSession
 from sqlmodel import select
@@ -22,6 +23,13 @@ class UserRepository:
         await self.session.commit()
         await self.session.refresh(user)
         return user
+
+    async def delete(self, user_uuid: UUID) -> None:
+        statement = select(User).where(User.uuid == user_uuid)
+        result = await self.session.exec(statement)
+        user = result.first()
+        await self.session.delete(user)
+        await self.session.commit()
 
     async def get_with_email(self, email: str) -> Optional[User]:
         statement = select(User).where(User.email == email)
