@@ -1,0 +1,15 @@
+from src.fast_api_template.modules.shared.base_use_case import BaseUseCase
+
+from .{{name__snake_case}}_dto import (
+    {{name__pascal_case}}DTO,
+    {{name__pascal_case}}ResponseDTO,
+)
+
+
+class {{name__pascal_case}}UseCase(BaseUseCase[{{name__pascal_case}}DTO, {{name__pascal_case}}ResponseDTO]):
+
+    def __init__(self) -> None:
+        pass
+
+    async def handle(self, dto: {{name__pascal_case}}DTO) -> {{name__pascal_case}}ResponseDTO:
+        pass

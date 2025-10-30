@@ -1,0 +1,17 @@
+from .{{name__snake_case}}_dto import (
+    {{name__pascal_case}}ResponseDTO,
+    {{name__pascal_case}}DTO,
+)
+from .{{name__snake_case}}_injection import (
+    Inject{{name__pascal_case}}UseCase,
+)
+from .{{name__snake_case}}_use_case import (
+    {{name__pascal_case}}UseCase,
+)
+
+
+async def {{name__snake_case}}_controller(
+    dto: {{name__pascal_case}}DTO, {{name__snake_case}}_use_case: {{name__pascal_case}}UseCase = Inject{{name__pascal_case}}UseCase
+) -> {{name__pascal_case}}ResponseDTO:
+    result = {{name__snake_case}}_use_case.handle(dto)
+    return await result

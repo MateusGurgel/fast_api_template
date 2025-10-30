@@ -1,0 +1,12 @@
+from fastapi import Depends
+
+from .{{name__snake_case}}_use_case import (
+    {{name__pascal_case}}UseCase,
+)
+
+
+def inject_{{name__snake_case}}_use_case() -> {{name__pascal_case}}UseCase:
+    return {{name__pascal_case}}UseCase()
+
+
+Inject{{name__pascal_case}}UseCase = Depends(inject_{{name__snake_case}}_use_case)
