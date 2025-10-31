@@ -4,18 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: converting the whole project to async">
-      <change afterPath="$PROJECT_DIR$/.idea/fast_api_template.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueprints/route/{{name}}_controller.py.template" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueprints/route/{{name}}_dto.py.template" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueprints/route/{{name}}_use_case.py.template" afterDir="false" />
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: update project scaffolding with blueprint templates and dependency improvements">
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/infra/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/infra/stripe_router_v1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fast_api_template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fast_api_template.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blueprints/route/{{file_name}}_controller.py.template" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blueprints/route/{{file_name}}_dto.py.template" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blueprints/route/{{file_name}}_injection.py.template" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/route/{{name}}_injection.py.template" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blueprints/route/{{file_name}}_use_case.py.template" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/core/infra/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/core/infra/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/infra/v1_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/infra/v1_router.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,18 +67,20 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/mateus/Projects/fast_api_template/src/fast_api_template/modules/user/v1/features/get_me",
+    "last_opened_file_path": "C:/Users/mateus/projects/fast_api_template/src/fast_api_template/modules",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mateus\projects\fast_api_template\src\fast_api_template\modules" />
       <recent name="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/get_me" />
       <recent name="$PROJECT_DIR$/src/fast_api_template/modules/health_check/use_cases/health_check" />
       <recent name="$PROJECT_DIR$/src/fast_api_template" />
@@ -114,7 +118,7 @@
       <workItem from="1749054981909" duration="10282000" />
       <workItem from="1749090472742" duration="73000" />
       <workItem from="1749516536337" duration="5263000" />
-      <workItem from="1761854585747" duration="2070000" />
+      <workItem from="1761854585747" duration="8078000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -180,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749519328933</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: update project scaffolding with blueprint templates and dependency improvements">
+      <option name="closed" value="true" />
+      <created>1761856794496</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1761856794496</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +220,7 @@
     <MESSAGE value="REFACTOR: " />
     <MESSAGE value="FEAT: add &quot;get me&quot; endpoint with JWT-based user retrieval and response DTO" />
     <MESSAGE value="feat: converting the whole project to async" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: converting the whole project to async" />
+    <MESSAGE value="feat: update project scaffolding with blueprint templates and dependency improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update project scaffolding with blueprint templates and dependency improvements" />
   </component>
 </project>
