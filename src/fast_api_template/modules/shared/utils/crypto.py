@@ -3,7 +3,7 @@ from typing import Dict
 
 import jwt
 
-from src.fast_api_template.core.infra.env import env
+from fast_api_template.core.infra.env import env
 
 
 def hash_string(string: str, salt: str = env.salt, peper: str = env.pepper) -> str:

@@ -4,20 +4,67 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: update project scaffolding with blueprint templates and dependency improvements">
-      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/infra/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/infra/stripe_router_v1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fast_api_template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fast_api_template.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: integrate Stripe API with routes for checkout and new environment variables">
+      <change afterPath="$PROJECT_DIR$/scripts/create_subscription_plan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/create_tables.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/shared/errors/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/shared/errors/entity_not_found_error.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/webhook/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/repository/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/repository/schemas/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/repository/schemas/create_subscription_plan_schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/repository/subscription_plan_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/repository/subscription_plan_repository_contract.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/repository/subscription_plan_repository_injection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/subscription.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/v1/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/v1/features/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/v1/features/create_subscription_plan/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/schemas/edit_user_schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/activate_subscription/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/deactivate_subscription/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blueprints/feature/{{name}}_dto.py.template" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/feature/{{name}}_dto.py.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blueprints/feature/{{name}}_use_case.py.template" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/feature/{{name}}_use_case.py.template" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/core/infra/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/core/infra/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/core/infra/base_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/core/infra/base_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/core/infra/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/core/infra/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/core/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/core/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/core/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/core/middlewares.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fast_api_template/infra/v1_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/infra/v1_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/health_check/infra/health_check_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/health_check/infra/health_check_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/health_check/use_cases/health_check/health_check_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/health_check/use_cases/health_check/health_check_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/shared/base_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/shared/base_use_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/shared/dependency_injections/postgree_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/shared/dependency_injections/postgree_session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/shared/dependency_injections/require_user_injection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/shared/dependency_injections/require_user_injection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/shared/utils/crypto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/shared/utils/crypto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_injection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_injection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_use_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/infra/stripe_router_v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/infra/stripe_router_v1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository_contract.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository_contract.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository_injection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository_injection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/create_user/create_user_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/create_user/create_user_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/create_user/create_user_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/create_user/create_user_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/create_user/create_user_injection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/create_user/create_user_injection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/create_user/create_user_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/create_user/create_user_use_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/delete_me/delete_me_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/delete_me/delete_me_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/delete_me/delete_me_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/delete_me/delete_me_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/delete_me/delete_me_injection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/delete_me/delete_me_injection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/delete_me/delete_me_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/delete_me/delete_me_use_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/get_me/get_me_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/get_me/get_me_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/get_me/get_me_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/get_me/get_me_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/login/login_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/login/login_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/login/login_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/login/login_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/login/login_injection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/login/login_injection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/login/login_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/login/login_use_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/infra/user_router_v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/infra/user_router_v1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/users/test_create_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/users/test_create_user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +87,14 @@
     &quot;assignee&quot;: &quot;MateusGurgel&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MateusGurgel/fast_api_template.git",
-    "accountId": "86d23925-ca83-4910-93b3-95fba01aa7ed"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MateusGurgel/fast_api_template.git&quot;,
+    &quot;accountId&quot;: &quot;86d23925-ca83-4910-93b3-95fba01aa7ed&quot;
   }
+}</component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
 }]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -56,41 +106,42 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/mateus/projects/fast_api_template/src/fast_api_template/modules",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mateus/projects/fast_api_template/src/fast_api_template/modules/subscription_plan/repository&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mateus\projects\fast_api_template\src\fast_api_template\modules\subscription_plan\repository" />
       <recent name="C:\Users\mateus\projects\fast_api_template\src\fast_api_template\modules" />
       <recent name="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/get_me" />
       <recent name="$PROJECT_DIR$/src/fast_api_template/modules/health_check/use_cases/health_check" />
       <recent name="$PROJECT_DIR$/src/fast_api_template" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mateus\projects\fast_api_template\src\fast_api_template\modules\user\v1\features" />
+      <recent name="C:\Users\mateus\projects\fast_api_template\src\fast_api_template\modules\subscription\v1\features" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/src/fast_api_template/core/infra" />
-      <recent name="$PROJECT_DIR$/src/fast_api_template/modules" />
-      <recent name="$PROJECT_DIR$/src/fast_api_template" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -118,7 +169,9 @@
       <workItem from="1749054981909" duration="10282000" />
       <workItem from="1749090472742" duration="73000" />
       <workItem from="1749516536337" duration="5263000" />
-      <workItem from="1761854585747" duration="8078000" />
+      <workItem from="1761854585747" duration="9697000" />
+      <workItem from="1761922230704" duration="13117000" />
+      <workItem from="1761960063820" duration="4987000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -192,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761856794496</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: integrate Stripe API with routes for checkout and new environment variables">
+      <option name="closed" value="true" />
+      <created>1761869939183</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1761869939183</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +282,7 @@
     <MESSAGE value="FEAT: add &quot;get me&quot; endpoint with JWT-based user retrieval and response DTO" />
     <MESSAGE value="feat: converting the whole project to async" />
     <MESSAGE value="feat: update project scaffolding with blueprint templates and dependency improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update project scaffolding with blueprint templates and dependency improvements" />
+    <MESSAGE value="feat: integrate Stripe API with routes for checkout and new environment variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: integrate Stripe API with routes for checkout and new environment variables" />
   </component>
 </project>

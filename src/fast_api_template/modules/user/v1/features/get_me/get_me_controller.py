@@ -1,8 +1,8 @@
-from src.fast_api_template.modules.shared.dependency_injections.require_user_injection import (
+from fast_api_template.modules.shared.dependency_injections.require_user_injection import (
     GetCurrentUser,
 )
-from src.fast_api_template.modules.user.user import User
-from src.fast_api_template.modules.user.v1.features.get_me.get_me_dto import (
+from fast_api_template.modules.user.user import User
+from fast_api_template.modules.user.v1.features.get_me.get_me_dto import (
     GetMeResponseDTO,
 )
 

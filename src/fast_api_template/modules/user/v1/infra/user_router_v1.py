@@ -1,15 +1,15 @@
 from fastapi import APIRouter
 
-from src.fast_api_template.modules.user.v1.features.create_user.create_user_controller import (
+from fast_api_template.modules.user.v1.features.create_user.create_user_controller import (
     create_user_controller,
 )
-from src.fast_api_template.modules.user.v1.features.delete_me.delete_me_controller import (
+from fast_api_template.modules.user.v1.features.delete_me.delete_me_controller import (
     delete_me_controller,
 )
-from src.fast_api_template.modules.user.v1.features.get_me.get_me_controller import (
+from fast_api_template.modules.user.v1.features.get_me.get_me_controller import (
     get_me_controller,
 )
-from src.fast_api_template.modules.user.v1.features.login.login_controller import (
+from fast_api_template.modules.user.v1.features.login.login_controller import (
     login_controller,
 )
 

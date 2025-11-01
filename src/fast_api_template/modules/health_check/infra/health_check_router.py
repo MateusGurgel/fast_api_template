@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from src.fast_api_template.modules.health_check.use_cases.health_check.health_check_controller import (
+from fast_api_template.modules.health_check.use_cases.health_check.health_check_controller import (
     get_api_status,
 )
 

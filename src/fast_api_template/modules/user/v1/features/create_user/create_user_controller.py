@@ -1,11 +1,11 @@
-from src.fast_api_template.modules.user.v1.features.create_user.create_user_dto import (
+from fast_api_template.modules.user.v1.features.create_user.create_user_dto import (
     CreateUserResponseDTO,
     CreateUserDTO,
 )
-from src.fast_api_template.modules.user.v1.features.create_user.create_user_injection import (
+from fast_api_template.modules.user.v1.features.create_user.create_user_injection import (
     GetCreateUserUseCase,
 )
-from src.fast_api_template.modules.user.v1.features.create_user.create_user_use_case import (
+from fast_api_template.modules.user.v1.features.create_user.create_user_use_case import (
     CreateUserUseCase,
 )
 

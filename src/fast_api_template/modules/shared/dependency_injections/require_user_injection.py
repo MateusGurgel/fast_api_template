@@ -4,19 +4,20 @@ import jwt
 from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 
-from src.fast_api_template.modules.shared.utils.crypto import decrypt_jwt
-from src.fast_api_template.modules.user.repository.user_repository import UserRepository
-from src.fast_api_template.modules.user.repository.user_repository_injection import (
-    GetUserRepository,
+from fast_api_template.modules.shared.errors.entity_not_found_error import EntityNotFoundError
+from fast_api_template.modules.shared.utils.crypto import decrypt_jwt
+from fast_api_template.modules.user.repository.user_repository import UserRepository
+from fast_api_template.modules.user.repository.user_repository_injection import (
+    InjectUserRepository,
 )
-from src.fast_api_template.modules.user.user import User
+from fast_api_template.modules.user.user import User
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/v1/users/login")
 
 
 async def get_current_user(
     token: str = Depends(oauth2_scheme),
-    user_repository: UserRepository = GetUserRepository,
+    user_repository: UserRepository = InjectUserRepository,
 ) -> User:
     try:
         payload = decrypt_jwt(token)
@@ -30,9 +31,9 @@ async def get_current_user(
         if now > expires_at:
             raise HTTPException(status_code=401, detail="Expired Token")
 
-        user: Optional[User] = await user_repository.get_with_email(payload["email"])
-
-        if not user:
+        try:
+            user: User = await user_repository.get_with_email(payload["email"])
+        except EntityNotFoundError:
             raise HTTPException(status_code=401, detail="Bad Credentials")
 
         return user

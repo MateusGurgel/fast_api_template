@@ -1,11 +1,11 @@
-from src.fast_api_template.modules.user.v1.features.login.login_dto import (
+from fast_api_template.modules.user.v1.features.login.login_dto import (
     LoginDTO,
     LoginResponseDTO,
 )
-from src.fast_api_template.modules.user.v1.features.login.login_injection import (
+from fast_api_template.modules.user.v1.features.login.login_injection import (
     GetLoginUseCase,
 )
-from src.fast_api_template.modules.user.v1.features.login.login_use_case import (
+from fast_api_template.modules.user.v1.features.login.login_use_case import (
     LoginUseCase,
 )
 

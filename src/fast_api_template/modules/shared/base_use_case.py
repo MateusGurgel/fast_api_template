@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Union, Awaitable, TypeVar, Generic
 
-from src.fast_api_template.modules.shared.base_dto import BaseDTO
+from fast_api_template.modules.shared.base_dto import BaseDTO
 
 InputDTO = TypeVar("InputDTO", bound=BaseDTO)
 OutputDTO = TypeVar("OutputDTO", bound=BaseDTO)

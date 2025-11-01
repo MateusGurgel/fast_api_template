@@ -4,18 +4,19 @@ from typing import Optional
 
 from fastapi import HTTPException
 
-from src.fast_api_template.core.infra.env import env
-from src.fast_api_template.modules.shared.base_use_case import BaseUseCase
-from src.fast_api_template.modules.shared.utils.crypto import (
+from fast_api_template.core.infra.env import env
+from fast_api_template.modules.shared.base_use_case import BaseUseCase
+from fast_api_template.modules.shared.errors.entity_not_found_error import EntityNotFoundError
+from fast_api_template.modules.shared.utils.crypto import (
     hash_string,
     encrypt_payload,
 )
 
-from src.fast_api_template.modules.user.repository.user_repository_contract import (
+from fast_api_template.modules.user.repository.user_repository_contract import (
     UserRepositoryContract,
 )
-from src.fast_api_template.modules.user.user import User
-from src.fast_api_template.modules.user.v1.features.login.login_dto import (
+from fast_api_template.modules.user.user import User
+from fast_api_template.modules.user.v1.features.login.login_dto import (
     LoginResponseDTO,
     LoginDTO,
 )
@@ -24,14 +25,14 @@ from src.fast_api_template.modules.user.v1.features.login.login_dto import (
 class LoginUseCase(BaseUseCase[LoginDTO, LoginResponseDTO]):
 
     def __init__(self, user_repository: UserRepositoryContract):
-        self.user_repository = user_repository
+        self.user_repository: UserRepositoryContract = user_repository
 
     async def handle(self, dto: LoginDTO) -> LoginResponseDTO:
 
-        user: Optional[User] = await self.user_repository.get_with_email(str(dto.email))
-
-        if not user:
-            raise HTTPException(status_code=404, detail="Bad Credentials")
+        try:
+            user: User = await self.user_repository.get_with_email(str(dto.email))
+        except EntityNotFoundError:
+            raise HTTPException(status_code=401, detail="Bad Credentials")
 
         hashed_password = hash_string(dto.password)
 

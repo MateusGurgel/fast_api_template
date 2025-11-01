@@ -1,4 +1,5 @@
-from typing import AsyncGenerator
+from contextlib import asynccontextmanager
+from typing import AsyncGenerator, AsyncIterator
 
 from sqlalchemy.ext.asyncio import create_async_engine
 from sqlmodel.ext.asyncio.session import AsyncSession
@@ -9,6 +10,10 @@ sqlite_url = f"sqlite+aiosqlite:///{sqlite_file_name}"
 
 engine = create_async_engine(sqlite_url, echo=True)
 
+@asynccontextmanager
+async def get_session_with_context_manager() -> AsyncIterator[AsyncSession]:
+    async with AsyncSession(engine) as session:
+        yield session
 
 async def get_session() -> AsyncGenerator[AsyncSession, None]:
     async with AsyncSession(engine) as session:

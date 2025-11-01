@@ -1,4 +1,4 @@
-from src.fast_api_template.modules.shared.base_use_case import BaseUseCase
+from fast_api_template.modules.shared.base_use_case import BaseUseCase
 
 from .{{name__snake_case}}_dto import (
     {{name__pascal_case}}DTO,
