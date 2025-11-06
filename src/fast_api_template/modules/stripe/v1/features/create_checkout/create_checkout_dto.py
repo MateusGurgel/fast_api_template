@@ -1,10 +1,10 @@
-from typing import Literal
+import uuid
 
 from fast_api_template.modules.user.user import User
 from fast_api_template.modules.shared.base_dto import BaseDTO
 
 class CreateCheckoutRequestDTO(BaseDTO):
-    plan: Literal["Standard"]
+    plan_uuid: uuid.UUID
 
 
 class CreateCheckoutDTO(CreateCheckoutRequestDTO):

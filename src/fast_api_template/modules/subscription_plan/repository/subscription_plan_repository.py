@@ -29,3 +29,13 @@ class SubscriptionPlanRepository:
         await self.session.commit()
         await self.session.refresh(subscription_plan)
         return subscription_plan
+
+    async def get_with_uuid(self, uuid: UUID) -> SubscriptionPlan:
+        statement = select(SubscriptionPlan).where(SubscriptionPlan.uuid == uuid)
+        result = await self.session.exec(statement)
+        subscription_plan = result.first()
+
+        if not subscription_plan:
+            raise EntityNotFoundError
+
+        return subscription_plan

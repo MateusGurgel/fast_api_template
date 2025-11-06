@@ -3,6 +3,9 @@ from fastapi import HTTPException
 from stripe import Customer
 
 from fast_api_template.modules.shared.base_use_case import BaseUseCase
+from fast_api_template.modules.subscription_plan.repository.subscription_plan_repository_contract import \
+    SubscriptionPlanRepositoryContract
+from fast_api_template.modules.subscription_plan.subscription import SubscriptionPlan
 from fast_api_template.modules.user.repository.schemas.edit_user_schema import EditUserSchema
 from fast_api_template.modules.user.repository.user_repository_contract import UserRepositoryContract
 
@@ -14,10 +17,15 @@ from .create_checkout_dto import (
 
 class CreateCheckoutUseCase(BaseUseCase[CreateCheckoutDTO, CreateCheckoutResponseDTO]):
 
-    def __init__(self, user_repository: UserRepositoryContract, stripe_success_url: str, stripe_failure_url: str) -> None:
+    def __init__(self,
+                 user_repository: UserRepositoryContract,
+                 subscription_plan_repository: SubscriptionPlanRepositoryContract,
+                 stripe_success_url: str,
+                 stripe_failure_url: str) -> None:
         self.user_repository: UserRepositoryContract = user_repository
         self.stripe_success_url: str = stripe_success_url
         self.stripe_failure_url: str = stripe_failure_url
+        self.subscription_plan_repository: SubscriptionPlanRepositoryContract = subscription_plan_repository
 
 
     async def handle(self, dto: CreateCheckoutDTO) -> CreateCheckoutResponseDTO:
@@ -44,16 +52,14 @@ class CreateCheckoutUseCase(BaseUseCase[CreateCheckoutDTO, CreateCheckoutRespons
 
                 costumer_id = new_customer.id
 
-            prices = stripe.Price.list(
-                lookup_keys=[dto.plan],
-                expand=['data.product']
-            )
+            plan: SubscriptionPlan = await self.subscription_plan_repository.get_with_uuid(dto.plan_id)
 
+            prices = stripe.Price.retrieve(plan.stripe_price_id)
             checkout_session = stripe.checkout.Session.create(
                 customer=costumer_id,
                 line_items=[
                     {
-                        'price': prices.data[0].id,
+                        'price': prices.data.id,
                         'quantity': 1,
                     },
                 ],
