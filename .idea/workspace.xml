@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="refactor: replace SQLite integration with PostgreSQL">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="fix: import env on postgres config" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +116,7 @@
       <workItem from="1762310636862" duration="63000" />
       <workItem from="1762369409076" duration="20351000" />
       <workItem from="1762644184667" duration="2731000" />
-      <workItem from="1762706738627" duration="1742000" />
+      <workItem from="1762706738627" duration="3041000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -264,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762706889850</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix: import env on postgres config">
+      <option name="closed" value="true" />
+      <created>1762712968934</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1762712968934</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +309,7 @@
     <MESSAGE value="feat: add signature validation in Stripe webhook controller with HTTP 400 error handling" />
     <MESSAGE value="feat: integrate `SubscriptionPlanRepository` into checkout process and update UUID handling in repository contract" />
     <MESSAGE value="refactor: replace SQLite integration with PostgreSQL" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: replace SQLite integration with PostgreSQL" />
+    <MESSAGE value="fix: import env on postgres config" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: import env on postgres config" />
   </component>
 </project>

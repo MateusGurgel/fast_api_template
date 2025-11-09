@@ -4,7 +4,7 @@ from typing import AsyncGenerator, AsyncIterator
 from sqlalchemy.ext.asyncio import create_async_engine
 from sqlmodel.ext.asyncio.session import AsyncSession
 from sqlmodel import SQLModel
-from env import env
+from fast_api_template.core.infra.env import env
 
 engine = create_async_engine(str(env.postgres_url), echo=True)
 
