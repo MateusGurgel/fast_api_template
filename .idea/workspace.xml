@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="fix: update Gunicorn config path in Dockerfile">
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: inject UserRepository into Stripe webhook use case">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/webhook/webhook_injection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/webhook/webhook_injection.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762657747511</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feat: inject UserRepository into Stripe webhook use case">
+      <option name="closed" value="true" />
+      <created>1762660052381</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1762660052381</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +274,7 @@
     <MESSAGE value="fix: correct conditional logic in subscription deletion event handling for Stripe webhooks" />
     <MESSAGE value="feat: add Dockerfile and Gunicorn integration&#10;e dependencies to include `gunicorn`." />
     <MESSAGE value="fix: update Gunicorn config path in Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: update Gunicorn config path in Dockerfile" />
+    <MESSAGE value="feat: inject UserRepository into Stripe webhook use case" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: inject UserRepository into Stripe webhook use case" />
   </component>
 </project>
