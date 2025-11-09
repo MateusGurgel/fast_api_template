@@ -36,7 +36,7 @@ class WebhookUseCase(BaseUseCase[WebhookDTO, WebhookResponseDTO]):
             user: User = await self.user_repository.get_with_stripe_customer_id(customer_id)
             await self.user_repository.set_user_subscription_plan(user.id, data['object']['metadata']['plan_id'])
 
-        if event_type == "customer.subscription.deleted":
+        elif event_type == "customer.subscription.deleted":
             customer_id = data['object']['customer']
             user: User = await self.user_repository.get_with_stripe_customer_id(customer_id)
             await self.user_repository.set_user_subscription_plan(user.id, None)
