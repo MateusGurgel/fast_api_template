@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: integrate Stripe API with routes for checkout and new environment variables">
-      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" />
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: enhance checkout process with subscription plan integration&#10;&#10;Include subscription plan retrieval in checkout process via `SubscriptionPlanRepository`. Replace plan lookup keys with UUID-based logic for better accuracy and flexibility.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_dto.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_use_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/repository/subscription_plan_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/repository/subscription_plan_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/repository/subscription_plan_repository_contract.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/repository/subscription_plan_repository_contract.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/webhook/webhook_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/webhook/webhook_use_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository_contract.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository_contract.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +120,8 @@
       <workItem from="1761960063820" duration="4987000" />
       <workItem from="1762309501007" duration="22000" />
       <workItem from="1762310636862" duration="63000" />
-      <workItem from="1762369409076" duration="7745000" />
+      <workItem from="1762369409076" duration="20351000" />
+      <workItem from="1762644184667" duration="2731000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -203,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761869939183</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: enhance checkout process with subscription plan integration&#10;&#10;Include subscription plan retrieval in checkout process via `SubscriptionPlanRepository`. Replace plan lookup keys with UUID-based logic for better accuracy and flexibility.">
+      <option name="closed" value="true" />
+      <created>1762390933419</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1762390933419</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +241,7 @@
     <MESSAGE value="feat: converting the whole project to async" />
     <MESSAGE value="feat: update project scaffolding with blueprint templates and dependency improvements" />
     <MESSAGE value="feat: integrate Stripe API with routes for checkout and new environment variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: integrate Stripe API with routes for checkout and new environment variables" />
+    <MESSAGE value="feat: enhance checkout process with subscription plan integration&#10;&#10;Include subscription plan retrieval in checkout process via `SubscriptionPlanRepository`. Replace plan lookup keys with UUID-based logic for better accuracy and flexibility." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: enhance checkout process with subscription plan integration&#10;&#10;Include subscription plan retrieval in checkout process via `SubscriptionPlanRepository`. Replace plan lookup keys with UUID-based logic for better accuracy and flexibility." />
   </component>
 </project>

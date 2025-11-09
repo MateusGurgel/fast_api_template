@@ -1,5 +1,6 @@
 import stripe
 from fastapi import HTTPException
+from sqlalchemy.testing.suite.test_reflection import metadata
 from stripe import Customer
 
 from fast_api_template.modules.shared.base_use_case import BaseUseCase
@@ -54,15 +55,17 @@ class CreateCheckoutUseCase(BaseUseCase[CreateCheckoutDTO, CreateCheckoutRespons
 
             plan: SubscriptionPlan = await self.subscription_plan_repository.get_with_uuid(dto.plan_id)
 
-            prices = stripe.Price.retrieve(plan.stripe_price_id)
             checkout_session = stripe.checkout.Session.create(
                 customer=costumer_id,
                 line_items=[
                     {
-                        'price': prices.data.id,
+                        'price': plan.stripe_price_id,
                         'quantity': 1,
                     },
                 ],
+                metadata={
+                    "plan_id": plan.id
+                },
                 mode='subscription',
                 success_url=self.stripe_success_url,
                 cancel_url=self.stripe_failure_url,

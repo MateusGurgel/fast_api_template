@@ -5,6 +5,7 @@ from sqlmodel.ext.asyncio.session import AsyncSession
 from sqlmodel import select
 
 from fast_api_template.modules.shared.errors.entity_not_found_error import EntityNotFoundError
+from fast_api_template.modules.subscription_plan.subscription import SubscriptionPlan
 from fast_api_template.modules.user.repository.schemas.edit_user_schema import EditUserSchema
 from fast_api_template.modules.user.repository.schemas.create_user_schema import (
     CreateUserSchema,
@@ -67,4 +68,24 @@ class UserRepository:
             raise EntityNotFoundError
 
         return user
+
+    async def set_user_subscription_plan(self, user_id: int, subscription_plan_id: Optional[int]) -> None:
+        select_user_statement = select(User).where(User.id == user_id)
+        result = await self.session.exec(select_user_statement)
+        user = result.first()
+
+        if not user:
+            raise EntityNotFoundError
+
+        select_plan_statement = select(SubscriptionPlan).where(SubscriptionPlan.id == subscription_plan_id)
+        result = await self.session.exec(select_plan_statement)
+        subscription_plan = result.first()
+
+        if not subscription_plan:
+            raise EntityNotFoundError
+
+        user.subscription_plan_id = subscription_plan_id
+        await self.session.commit()
+        await self.session.refresh(user)
+
 
