@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: enhance checkout process with subscription plan integration&#10;&#10;Include subscription plan retrieval in checkout process via `SubscriptionPlanRepository`. Replace plan lookup keys with UUID-based logic for better accuracy and flexibility.">
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="fix: correct conditional logic in subscription deletion event handling for Stripe webhooks">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fast_api_template/core/infra/gunicorn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_use_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/webhook/webhook_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/webhook/webhook_use_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository_contract.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/user/repository/user_repository_contract.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,36 +51,36 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mateus/projects/fast_api_template/src/fast_api_template/modules/subscription_plan/repository&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/mateus/projects/fast_api_template/src/fast_api_template/core/infra",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mateus\projects\fast_api_template\src\fast_api_template\core\infra" />
+      <recent name="C:\Users\mateus\projects\fast_api_template" />
       <recent name="C:\Users\mateus\projects\fast_api_template\src\fast_api_template\modules\subscription_plan\repository" />
       <recent name="C:\Users\mateus\projects\fast_api_template\src\fast_api_template\modules" />
       <recent name="$PROJECT_DIR$/src/fast_api_template/modules/user/v1/features/get_me" />
-      <recent name="$PROJECT_DIR$/src/fast_api_template/modules/health_check/use_cases/health_check" />
-      <recent name="$PROJECT_DIR$/src/fast_api_template" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mateus\projects\fast_api_template\src\fast_api_template\modules\user\v1\features" />
@@ -211,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762390933419</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix: correct conditional logic in subscription deletion event handling for Stripe webhooks">
+      <option name="closed" value="true" />
+      <created>1762655054774</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1762655054774</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +250,8 @@
     <MESSAGE value="feat: update project scaffolding with blueprint templates and dependency improvements" />
     <MESSAGE value="feat: integrate Stripe API with routes for checkout and new environment variables" />
     <MESSAGE value="feat: enhance checkout process with subscription plan integration&#10;&#10;Include subscription plan retrieval in checkout process via `SubscriptionPlanRepository`. Replace plan lookup keys with UUID-based logic for better accuracy and flexibility." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: enhance checkout process with subscription plan integration&#10;&#10;Include subscription plan retrieval in checkout process via `SubscriptionPlanRepository`. Replace plan lookup keys with UUID-based logic for better accuracy and flexibility." />
+    <MESSAGE value="feat: integrate subscription plan assignment in Stripe webhooks" />
+    <MESSAGE value="fix: correct conditional logic in subscription deletion event handling for Stripe webhooks" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: correct conditional logic in subscription deletion event handling for Stripe webhooks" />
   </component>
 </project>

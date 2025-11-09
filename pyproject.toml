@@ -17,6 +17,7 @@ dependencies = [
     "aiosqlite (>=0.21.0,<0.22.0)",
     "pytest-asyncio (>=1.0.0,<2.0.0)",
     "stripe (>=13.1.0,<14.0.0)",
+    "gunicorn (>=23.0.0,<24.0.0)",
 ]
 
 
