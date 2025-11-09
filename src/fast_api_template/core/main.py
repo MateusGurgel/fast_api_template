@@ -4,7 +4,7 @@ from typing import AsyncIterator
 import stripe
 from fastapi import FastAPI
 
-from fast_api_template.core.infra.database import create_db_and_tables
+from fast_api_template.core.infra.postgres import create_db_and_tables
 from fast_api_template.core.infra.env import env
 from fast_api_template.core.middlewares import add_middlewares
 from fast_api_template.core.infra.base_router import router

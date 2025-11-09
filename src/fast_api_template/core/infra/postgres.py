@@ -5,10 +5,7 @@ from sqlalchemy.ext.asyncio import create_async_engine
 from sqlmodel.ext.asyncio.session import AsyncSession
 from sqlmodel import SQLModel
 
-sqlite_file_name = "database.db"
-sqlite_url = f"sqlite+aiosqlite:///{sqlite_file_name}"
-
-engine = create_async_engine(sqlite_url, echo=True)
+engine = create_async_engine(str(env.postgres_url), echo=True)
 
 @asynccontextmanager
 async def get_session_with_context_manager() -> AsyncIterator[AsyncSession]:

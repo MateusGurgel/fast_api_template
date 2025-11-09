@@ -2,7 +2,7 @@ from sqlmodel import Session
 from starlette.testclient import TestClient
 
 from fast_api_template.core.main import app
-from fast_api_template.core.infra.database import (
+from fast_api_template.core.infra.postgres import (
     get_session,
 )
 

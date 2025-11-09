@@ -3,7 +3,7 @@ import asyncio
 import stripe
 import typer
 
-from fast_api_template.core.infra.database import get_session_with_context_manager
+from fast_api_template.core.infra.postgres import get_session_with_context_manager
 from fast_api_template.core.infra.env import env
 from fast_api_template.modules.subscription_plan.repository.subscription_plan_repository import \
     SubscriptionPlanRepository

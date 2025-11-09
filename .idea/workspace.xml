@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: add signature validation in Stripe webhook controller with HTTP 400 error handling">
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: integrate `SubscriptionPlanRepository` into checkout process and update UUID handling in repository contract">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_injection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/create_checkout/create_checkout_injection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/repository/subscription_plan_repository_contract.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/repository/subscription_plan_repository_contract.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762661375827</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat: integrate `SubscriptionPlanRepository` into checkout process and update UUID handling in repository contract">
+      <option name="closed" value="true" />
+      <created>1762667506775</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1762667506775</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +292,7 @@
     <MESSAGE value="fix: update Gunicorn config path in Dockerfile" />
     <MESSAGE value="feat: inject UserRepository into Stripe webhook use case" />
     <MESSAGE value="feat: add signature validation in Stripe webhook controller with HTTP 400 error handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add signature validation in Stripe webhook controller with HTTP 400 error handling" />
+    <MESSAGE value="feat: integrate `SubscriptionPlanRepository` into checkout process and update UUID handling in repository contract" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: integrate `SubscriptionPlanRepository` into checkout process and update UUID handling in repository contract" />
   </component>
 </project>
