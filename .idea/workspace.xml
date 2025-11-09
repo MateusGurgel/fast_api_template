@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: add Dockerfile and Gunicorn integration&#10;e dependencies to include `gunicorn`.">
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="fix: update Gunicorn config path in Dockerfile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/webhook/webhook_injection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/stripe/v1/features/webhook/webhook_injection.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762656319420</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix: update Gunicorn config path in Dockerfile">
+      <option name="closed" value="true" />
+      <created>1762657747511</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1762657747511</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +266,7 @@
     <MESSAGE value="feat: integrate subscription plan assignment in Stripe webhooks" />
     <MESSAGE value="fix: correct conditional logic in subscription deletion event handling for Stripe webhooks" />
     <MESSAGE value="feat: add Dockerfile and Gunicorn integration&#10;e dependencies to include `gunicorn`." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add Dockerfile and Gunicorn integration&#10;e dependencies to include `gunicorn`." />
+    <MESSAGE value="fix: update Gunicorn config path in Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: update Gunicorn config path in Dockerfile" />
   </component>
 </project>
