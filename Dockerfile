@@ -33,4 +33,4 @@ COPY --from=builder /app /app
 
 EXPOSE 8000
 
-CMD ["gunicorn", "fast_api_template.core.main:app", "-c", "src/fast_api_template/infra/gunicorn.py", "--bind", "0.0.0.0:8000", "--worker-class", "uvicorn.workers.UvicornWorker", "--workers", "5"]
+CMD ["gunicorn", "fast_api_template.core.main:app", "-c", "src/fast_api_template/core/infra/gunicorn.py", "--bind", "0.0.0.0:8000", "--worker-class", "uvicorn.workers.UvicornWorker", "--workers", "5"]

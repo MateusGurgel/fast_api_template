@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="fix: correct conditional logic in subscription deletion event handling for Stripe webhooks">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fast_api_template/core/infra/gunicorn.py" afterDir="false" />
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="feat: add Dockerfile and Gunicorn integration&#10;e dependencies to include `gunicorn`.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762655054774</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: add Dockerfile and Gunicorn integration&#10;e dependencies to include `gunicorn`.">
+      <option name="closed" value="true" />
+      <created>1762656319420</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1762656319420</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +257,7 @@
     <MESSAGE value="feat: enhance checkout process with subscription plan integration&#10;&#10;Include subscription plan retrieval in checkout process via `SubscriptionPlanRepository`. Replace plan lookup keys with UUID-based logic for better accuracy and flexibility." />
     <MESSAGE value="feat: integrate subscription plan assignment in Stripe webhooks" />
     <MESSAGE value="fix: correct conditional logic in subscription deletion event handling for Stripe webhooks" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: correct conditional logic in subscription deletion event handling for Stripe webhooks" />
+    <MESSAGE value="feat: add Dockerfile and Gunicorn integration&#10;e dependencies to include `gunicorn`." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add Dockerfile and Gunicorn integration&#10;e dependencies to include `gunicorn`." />
   </component>
 </project>
