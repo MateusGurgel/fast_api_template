@@ -10,7 +10,7 @@ class CreateSubscriptionPlanSchema(BaseModel):
     price: int
     stripe_price_id: str
     currency: Optional[str] = "usd"
-    interval: Optional[Interval] = Interval.MONTH
+    billing_interval: Optional[Interval] = Interval.MONTH
     description: Optional[str] = None
     interval_count: Optional[int] = None
     trial_period_days: Optional[int] = None

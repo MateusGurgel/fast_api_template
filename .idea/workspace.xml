@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="fix: import env on postgres config" />
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="fix: import env on postgres config">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/subscription.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/subscription.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +119,9 @@
       <workItem from="1762310636862" duration="63000" />
       <workItem from="1762369409076" duration="20351000" />
       <workItem from="1762644184667" duration="2731000" />
-      <workItem from="1762706738627" duration="3041000" />
+      <workItem from="1762706738627" duration="3609000" />
+      <workItem from="1762740056515" duration="1129000" />
+      <workItem from="1762743099452" duration="1176000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -270,7 +275,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762712968934</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fix: import env on postgres config">
+      <option name="closed" value="true" />
+      <created>1762713088526</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1762713088526</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fix: import env on postgres config">
+      <option name="closed" value="true" />
+      <created>1762713555358</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1762713555358</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -21,7 +21,7 @@ def run(
         name: str = typer.Argument(..., help="Name to use for the subscription plan"),
         price: int = typer.Argument(..., help="Price in cents to use for the subscription plan"),
         currency: str = typer.Argument("usd", help="Currency to use for the subscription plan"),
-        interval: Interval = typer.Argument(Interval.MONTH, help="Interval to use for the subscription plan"),
+        billing_interval: Interval = typer.Argument(Interval.MONTH, help="Interval to use for the subscription plan"),
 ) -> None:
 
     async def run_async() -> None:
@@ -33,7 +33,7 @@ def run(
                 CreateSubscriptionPlanDTO(
                     currency=currency,
                     price=price,
-                    interval=interval,
+                    billing_interval=billing_interval,
                     name=name,
                 )
             )

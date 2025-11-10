@@ -19,7 +19,7 @@ class SubscriptionPlan(BaseModel, table=True):
 
     description: Optional[str] = Field(nullable=True)
     currency: str = Field(nullable=False, default="usd")
-    interval: Interval = Field(nullable=False, default=Interval.MONTH)
+    billing_interval: Interval = Field(nullable=False, default=Interval.MONTH)
     interval_count: int = Field(nullable=False, default=1)
     trial_period_days: int = Field(nullable=False, default=0)
     active: bool = Field(nullable=False, default=True)
