@@ -53,7 +53,7 @@ class CreateCheckoutUseCase(BaseUseCase[CreateCheckoutDTO, CreateCheckoutRespons
 
                 costumer_id = new_customer.id
 
-            plan: SubscriptionPlan = await self.subscription_plan_repository.get_with_uuid(dto.plan_id)
+            plan: SubscriptionPlan = await self.subscription_plan_repository.get_with_uuid(dto.plan_uuid)
 
             checkout_session = stripe.checkout.Session.create(
                 customer=costumer_id,
