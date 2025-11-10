@@ -11,5 +11,5 @@ class BaseModel(SQLModel):
         nullable=False,
     )
     created_at: Optional[datetime] = Field(
-        default_factory=lambda: datetime.now(timezone.utc), nullable=False
+        default_factory=lambda: datetime.now(), nullable=False
     )
