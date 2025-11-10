@@ -4,7 +4,7 @@ from typing import Optional
 from fast_api_template.modules.shared.base_model import BaseModel
 from sqlmodel import Field
 
-class Interval(str, Enum):
+class BillingInterval(str, Enum):
     DAY = "day"
     WEEK = "week"
     MONTH = "month"
@@ -19,7 +19,7 @@ class SubscriptionPlan(BaseModel, table=True):
 
     description: Optional[str] = Field(nullable=True)
     currency: str = Field(nullable=False, default="usd")
-    billing_interval: Interval = Field(nullable=False, default=Interval.MONTH)
+    billing_interval: BillingInterval = Field(nullable=False, default=BillingInterval.MONTH)
     interval_count: int = Field(nullable=False, default=1)
     trial_period_days: int = Field(nullable=False, default=0)
     active: bool = Field(nullable=False, default=True)

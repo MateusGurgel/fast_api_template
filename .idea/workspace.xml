@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="fix: import env on postgres config">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/subscription.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fast_api_template/modules/subscription_plan/subscription.py" afterDir="false" />
-    </list>
+    <list default="true" id="ed01ada7-9084-4964-9af8-2a1408b3380e" name="Changes" comment="refactor: rename `interval` to `billing_interval` across subscription plan module for clarity" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +118,7 @@
       <workItem from="1762644184667" duration="2731000" />
       <workItem from="1762706738627" duration="3609000" />
       <workItem from="1762740056515" duration="1129000" />
-      <workItem from="1762743099452" duration="1176000" />
+      <workItem from="1762743099452" duration="1927000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -291,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762713555358</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="refactor: rename `interval` to `billing_interval` across subscription plan module for clarity">
+      <option name="closed" value="true" />
+      <created>1762745082501</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1762745082501</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,6 +336,7 @@
     <MESSAGE value="feat: integrate `SubscriptionPlanRepository` into checkout process and update UUID handling in repository contract" />
     <MESSAGE value="refactor: replace SQLite integration with PostgreSQL" />
     <MESSAGE value="fix: import env on postgres config" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: import env on postgres config" />
+    <MESSAGE value="refactor: rename `interval` to `billing_interval` across subscription plan module for clarity" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: rename `interval` to `billing_interval` across subscription plan module for clarity" />
   </component>
 </project>

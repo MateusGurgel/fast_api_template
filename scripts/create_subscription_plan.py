@@ -7,7 +7,7 @@ from fast_api_template.core.infra.postgres import get_session_with_context_manag
 from fast_api_template.core.infra.env import env
 from fast_api_template.modules.subscription_plan.repository.subscription_plan_repository import \
     SubscriptionPlanRepository
-from fast_api_template.modules.subscription_plan.subscription import Interval
+from fast_api_template.modules.subscription_plan.subscription import BillingInterval
 from fast_api_template.modules.subscription_plan.v1.features.create_subscription_plan.create_subscription_plan_dto import \
     CreateSubscriptionPlanDTO
 from fast_api_template.modules.subscription_plan.v1.features.create_subscription_plan.create_subscription_plan_use_case import \
@@ -21,7 +21,7 @@ def run(
         name: str = typer.Argument(..., help="Name to use for the subscription plan"),
         price: int = typer.Argument(..., help="Price in cents to use for the subscription plan"),
         currency: str = typer.Argument("usd", help="Currency to use for the subscription plan"),
-        billing_interval: Interval = typer.Argument(Interval.MONTH, help="Interval to use for the subscription plan"),
+        billing_interval: BillingInterval = typer.Argument(BillingInterval.MONTH, help="Interval to use for the subscription plan"),
 ) -> None:
 
     async def run_async() -> None:
