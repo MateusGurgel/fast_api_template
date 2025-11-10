@@ -22,7 +22,7 @@ class CreateSubscriptionPlanUseCase(BaseUseCase[CreateSubscriptionPlanDTO, Creat
         new_price = stripe.Price.create(
             currency=dto.currency,
             unit_amount=dto.price,
-            recurring={"interval": dto.interval.value},
+            recurring={"interval": dto.billing_interval.value},
             product_data={"name": dto.name},
         )
 

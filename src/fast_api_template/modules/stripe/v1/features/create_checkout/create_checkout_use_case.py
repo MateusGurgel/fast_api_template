@@ -79,5 +79,6 @@ class CreateCheckoutUseCase(BaseUseCase[CreateCheckoutDTO, CreateCheckoutRespons
             )
 
         except Exception as e:
+            print(e)
             raise HTTPException(500, "Error while creating checkout session, try again later")
 
