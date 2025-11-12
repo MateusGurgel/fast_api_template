@@ -33,9 +33,9 @@ class CreateCheckoutUseCase(BaseUseCase[CreateCheckoutDTO, CreateCheckoutRespons
 
         try:
 
-            costumer_id: str = dto.user.stripe_session_id
+            customer_id: str = dto.user.stripe_session_id
 
-            if not costumer_id:
+            if not customer_id:
 
                 new_customer = stripe.Customer.create(
                     email=dto.user.email,
@@ -51,12 +51,12 @@ class CreateCheckoutUseCase(BaseUseCase[CreateCheckoutDTO, CreateCheckoutRespons
                     )
                 )
 
-                costumer_id = new_customer.id
+                customer_id = new_customer.id
 
             plan: SubscriptionPlan = await self.subscription_plan_repository.get_with_uuid(dto.plan_uuid)
 
             checkout_session = stripe.checkout.Session.create(
-                customer=costumer_id,
+                customer=customer_id,
                 line_items=[
                     {
                         'price': plan.stripe_price_id,
@@ -70,9 +70,6 @@ class CreateCheckoutUseCase(BaseUseCase[CreateCheckoutDTO, CreateCheckoutRespons
                 success_url=self.stripe_success_url,
                 cancel_url=self.stripe_failure_url,
             )
-
-            if not isinstance(checkout_session.customer, Customer):
-                raise Exception("Customer was not created")
 
             return CreateCheckoutResponseDTO(
                 checkout_url=checkout_session.url
