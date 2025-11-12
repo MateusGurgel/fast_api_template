@@ -33,7 +33,7 @@ class CreateCheckoutUseCase(BaseUseCase[CreateCheckoutDTO, CreateCheckoutRespons
 
         try:
 
-            customer_id: str = dto.user.stripe_session_id
+            customer_id: str = dto.user.stripe_id
 
             if not customer_id:
 
@@ -47,7 +47,7 @@ class CreateCheckoutUseCase(BaseUseCase[CreateCheckoutDTO, CreateCheckoutRespons
                 await self.user_repository.edit(
                     dto.user.id,
                     EditUserSchema(
-                        stripe_session_id=new_customer.id
+                        stripe_id=new_customer.id
                     )
                 )
 
