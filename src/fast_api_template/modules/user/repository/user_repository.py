@@ -59,8 +59,8 @@ class UserRepository:
         await self.session.refresh(user)
         return user
 
-    async def get_with_stripe_customer_id(self, stripe_customer_id: str) -> User:
-        statement = select(User).where(User.stripe_customer_id == stripe_customer_id)
+    async def get_with_stripe_id(self, stripe_id: str) -> User:
+        statement = select(User).where(User.stripe_id == stripe_id)
         result = await self.session.exec(statement)
         user = result.first()
 
