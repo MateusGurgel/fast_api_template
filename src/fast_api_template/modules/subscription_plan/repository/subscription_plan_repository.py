@@ -39,3 +39,13 @@ class SubscriptionPlanRepository:
             raise EntityNotFoundError
 
         return subscription_plan
+
+    async def get_with_stripe_price_id(self, stripe_price_id: str) -> SubscriptionPlan:
+        statement = select(SubscriptionPlan).where(SubscriptionPlan.stripe_price_id == stripe_price_id)
+        result = await self.session.exec(statement)
+        subscription_plan = result.first()
+
+        if not subscription_plan:
+            raise EntityNotFoundError
+
+        return subscription_plan
