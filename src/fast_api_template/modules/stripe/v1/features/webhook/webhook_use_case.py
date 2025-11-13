@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, Any
 
 import stripe
 from fastapi import HTTPException
@@ -24,12 +24,12 @@ class WebhookUseCase(BaseUseCase[WebhookDTO, WebhookResponseDTO]):
         self.user_repository: UserRepositoryContract = user_repository
         self.subscription_plan_repository: SubscriptionPlanRepositoryContract = subscription_plan_repository
 
-    async def process_payment_failed(self, data: Dict[str, int | any]) -> None:
+    async def process_payment_failed(self, data: Dict[str | int, Any]) -> None:
         customer_id = data['object']['customer']
         user: User = await self.user_repository.get_with_stripe_customer_id(customer_id)
         await self.user_repository.set_user_subscription_plan(user.id, None)
 
-    async def process_payment_succeeded(self, data: Dict[str, int | any]) -> None:
+    async def process_payment_succeeded(self, data: Dict[str | int, Any]) -> None:
         customer_id = data['object']['customer']
         user: User = await self.user_repository.get_with_stripe_customer_id(customer_id)
         stripe_price_id = data['object']['lines']['data'][0]['price']['id']
